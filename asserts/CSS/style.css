@@ -1,0 +1,152 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "open-sans", sans-serif;
+    background-color: #040404;
+    color: #ffff;
+    position: relative;
+    background: transparent;
+}
+
+
+body::before {
+    content: "";
+    position: fixed;
+    overflow: hidden;
+    background: url("../img/background.png") top center no-repeat;
+    background-size: cover;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 100vh;
+    z-index: -1;
+}
+
+@media (min-width: 1024px) {
+    body::before {
+        background-attachment: fixed;
+    }
+}
+
+a {
+    color: #18d26e;
+    text-decoration: none;
+}
+
+.header {
+    transition: ease-in-out 0.3s;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    z-index: 997;
+    overflow: auto;
+
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow: visible;
+}
+
+.header .container {
+    width: 962px;
+    height: 549px;
+    margin: 0px;
+    margin-left: 100px;
+    background-color: rgba(153, 238, 255, 0.0);
+    overflow: visible;
+  }
+
+  .header .container * {
+    transition: ease-in-out 0.3s;
+}
+
+.header .container h1 {
+    width: auto;
+    height: auto; 
+    overflow: visible;
+    white-space: pre;
+    font-family: "Inter", sans-serif;
+    text-decoration: none;
+    color: #FFFF;
+    line-height: 1.2;
+    letter-spacing: 0px;
+    font-size: 64px;
+    display: inline-block;
+}
+
+.header .container span {
+    display: block;
+    font-size: 1.6rem;
+    color: rgb(255, 255, 255);
+    font-weight: 50;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.header .container .navbar {
+    margin-top: 25px;
+}
+
+.header .container .navbar a, ul {
+    list-style-type: none;
+    color: #ffffff;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.header .container .navbar li {
+    position: relative;
+}
+
+.header .container .navbar a  {
+    overflow: hidden;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-word;
+    font-family: "Inter", sans-serif;
+    color: #ffffff;
+    margin-right: 50px;
+    font-size: 24px;
+    letter-spacing: 0px;
+    line-height: 1.2;
+}
+
+.header .container .navbar a:hover {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.header .redes-sociais {
+    position: fixed;
+    padding: 0;
+    right: 0;
+    margin-right: 15px;
+}
+.header .redes-sociais .redes {
+    display: block;
+}
+
+.header .redes-sociais .redes .svg-style {
+    background-color: rgba(255, 255, 255, 0.7);
+    display: table;
+    padding: 7px;
+    border-radius: 100%;
+    margin: auto;
+}
+
+.header .redes-sociais .redes .svg-style:hover {
+    padding: 12px;
+    transition: all .1s ease-in-out;
+}
+
+.header .redes-sociais .redes .svg-style .imagem-icone {
+    width: 18px;
+    height: 18px;
+    display: table-cell;
+    justify-self: center;
+    margin: auto;
+}
