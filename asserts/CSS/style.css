@@ -33,7 +33,7 @@ body::before {
 
 #header {
     transition: ease-in-out 0.3s;
-    position: fixed;
+    position: relative;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -186,20 +186,22 @@ body::before {
 }
 
 .modal-container .modal .perfil {
-    height: 367px;
-    width: 156px;
-    margin-top: 42px;
+    position: relative;
+    height: 500px;
+    width: 215px;
+    margin-top: 50px;
 }
 
 .modal-container .modal .perfil .imagem-perfil {
-    width: 150px;
+    width: 215px;
+    height: 430px;
     border-radius: 15px;
 } 
 
 .modal-container .modal .perfil .btn-resume {
     display: block;
     margin-top: 10px;
-    width: 150px;
+    width: 215px;
     height: 40px;
     padding: 0;
     border-radius: 89px;
@@ -210,4 +212,36 @@ body::before {
 .modal-container .modal .perfil .btn-resume:hover {
     background-color: rgba(199, 199, 199, 0.6);
     box-shadow: 5px 8px 5px rgba(0, 0, 0, 0.7);
+}
+
+.modal-container .modal .descricao {
+    height: 200px;
+    width: 80%;
+    color: white;
+    margin-top: 46px;
+    margin-left: 30px;
+}
+
+.modal-container .modal .descricao p {
+    margin-top: 40px;
+}
+
+.modal-container .modal .skills-container {
+    width: 74%;
+    height: 250px;
+    position: absolute;
+    left: 23%;
+    top: 300px;
+    display: inline-grid;
+    color: white;
+}
+
+.modal-container .modal .skills-container thead {
+    font-weight: bold;
+}
+
+.tbody, td, tfoot, th, thead, tr {
+    border-color: transparent;
+    border-style: none;
+    border-width: 14px;
 }
