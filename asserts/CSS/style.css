@@ -32,7 +32,7 @@ body::before {
 }
 
 #header {
-    transition: ease-in-out 0.3s;
+    transition: ease-in-out 0.4s;
     position: relative;
     height: 100vh;
     width: 100vw;
@@ -43,6 +43,10 @@ body::before {
     overflow: visible;
 }
 
+#header * {
+    transition: ease-in-out 0.4s;
+}
+
 #header .container {
     width: 962px;
     height: 549px;
@@ -50,10 +54,6 @@ body::before {
     margin-left: 100px;
     background-color: rgba(153, 238, 255, 0.0);
     overflow: visible;
-}
-
-#header .container * {
-    transition: ease-in-out 0.3s;
 }
 
 #header .container h1 {
@@ -114,12 +114,48 @@ body::before {
     color: rgba(255, 255, 255, 0.6);
 }
 
+#header.header-top {
+    height: 80px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#header.header-top h1 {
+    margin-right: auto;
+    font-size: 30px;
+}
+
+#header.header-top span {
+    display: none;
+}
+
+#header.header-top .container {
+    display: flex;
+    align-items: center;
+}
+
+#header.header-top .navbar {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    #header.header-top {
+        height: 60px;
+    }
+    #header.header-top h1 {
+        font-size: 25px;
+    }
+}
+
 .redes-sociais {
     position: fixed;
     padding: 0;
     top: 350px;
     right: 0;
     margin-right: 4px;
+    z-index: 9999;
 }
 
 .redes-sociais .redes {
@@ -151,12 +187,18 @@ body::before {
     margin: 10px;
 }
 
- .modal-container {
+.about {
+    position: fixed;
+    height: 100vh;
+    margin-top: 80px;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.about .modal-container {
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
     overflow: visible;
-
     top: 0;
     left: 0;
     z-index: 2900;
@@ -165,7 +207,7 @@ body::before {
     align-items: center;
 }
 
-.modal-container .modal {
+.about .modal-container .modal {
     display: flex;
     background: rgba(0, 0, 0, 0.4);
     width: 86vw;
@@ -177,28 +219,28 @@ body::before {
     position: relative;
 }
 
-.modal-container.mostrar {
+.about .modal-container.mostrar {
     display: flex;
 }
 
-.modal-container.mostrar .modal {
+.about .modal-container.mostrar .modal {
     animation: modal .3s;
 }
 
-.modal-container .modal .perfil {
+.about .modal-container .modal .perfil {
     position: relative;
     height: 500px;
     width: 215px;
     margin-top: 50px;
 }
 
-.modal-container .modal .perfil .imagem-perfil {
+.about .modal-container .modal .perfil .imagem-perfil {
     width: 215px;
     height: 430px;
     border-radius: 15px;
-} 
+}
 
-.modal-container .modal .perfil .btn-resume {
+.about .modal-container .modal .perfil .btn-resume {
     display: block;
     margin-top: 10px;
     width: 215px;
@@ -209,12 +251,12 @@ body::before {
     background-color: rgba(255, 255, 255, 0.384);
 }
 
-.modal-container .modal .perfil .btn-resume:hover {
+.about .modal-container .modal .perfil .btn-resume:hover {
     background-color: rgba(199, 199, 199, 0.6);
     box-shadow: 5px 8px 5px rgba(0, 0, 0, 0.7);
 }
 
-.modal-container .modal .descricao {
+.about .modal-container .modal .descricao {
     height: 200px;
     width: 80%;
     color: white;
@@ -222,11 +264,11 @@ body::before {
     margin-left: 30px;
 }
 
-.modal-container .modal .descricao p {
+.about .modal-container .modal .descricao p {
     margin-top: 40px;
 }
 
-.modal-container .modal .skills-container {
+.about .modal-container .modal .skills-container {
     width: 74%;
     height: 250px;
     position: absolute;
@@ -236,7 +278,7 @@ body::before {
     color: white;
 }
 
-.modal-container .modal .skills-container thead {
+.about .modal-container .modal .skills-container thead {
     font-weight: bold;
 }
 
