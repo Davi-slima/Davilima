@@ -114,6 +114,21 @@ body::before {
     color: rgba(255, 255, 255, 0.6);
 }
 
+@media screen and (max-width: 700px) {
+    #header .container {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        height: 298px;
+    }
+    #header .container .navbar a {
+        float: none;
+        display: block;
+        text-align: left;
+        margin-right: 38px;
+    }
+}
+
 #header.header-top {
     height: 80px;
     position: fixed;
@@ -140,7 +155,7 @@ body::before {
     margin: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
     #header.header-top {
         height: 60px;
     }
@@ -185,24 +200,38 @@ body::before {
 
 .redes-sociais .redes .redes-icones {
     margin: 10px;
+
+}
+@media screen and (max-width: 700px) {
+    .redes-sociais {
+        display: flex;
+        top: 590px;
+        left: 0;
+        width: 275px;
+        margin-right: 0;
+    }
+    .redes-sociais .redes {
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
 }
 
 .about {
     position: fixed;
-    height: 100vh;
+    height: 100%;
     margin-top: 80px;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .about .modal-container {
+    display: flex;
     width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
+    height: 80%;
     overflow: visible;
     top: 0;
     left: 0;
     z-index: 2900;
-    display: none;
     justify-content: center;
     align-items: center;
 }
@@ -210,8 +239,8 @@ body::before {
 .about .modal-container .modal {
     display: flex;
     background: rgba(0, 0, 0, 0.4);
-    width: 86vw;
-    height: 100vh;
+    width: 83%;
+    height: 80%;
     min-width: 300px;
     padding: 30px;
     border-radius: 30px;
@@ -219,34 +248,30 @@ body::before {
     position: relative;
 }
 
-.about .modal-container.mostrar {
-    display: flex;
-}
-
 .about .modal-container.mostrar .modal {
-    animation: modal .3s;
+    transition: ease-in-out 0.4s;
 }
 
 .about .modal-container .modal .perfil {
     position: relative;
-    height: 500px;
-    width: 215px;
-    margin-top: 50px;
+    height: 100%;
+    width: 250px;
 }
 
 .about .modal-container .modal .perfil .imagem-perfil {
     width: 215px;
     height: 430px;
+    margin: 18px;
     border-radius: 15px;
 }
 
 .about .modal-container .modal .perfil .btn-resume {
     display: block;
-    margin-top: 10px;
+    margin: 18px;
     width: 215px;
     height: 40px;
     padding: 0;
-    border-radius: 89px;
+    border-radius: 90px;
     color: white;
     background-color: rgba(255, 255, 255, 0.384);
 }
@@ -269,12 +294,12 @@ body::before {
 }
 
 .about .modal-container .modal .skills-container {
-    width: 74%;
+    width: 70%;
     height: 250px;
     position: absolute;
-    left: 23%;
-    top: 300px;
-    display: inline-grid;
+    left: 20%;
+    top: 280px;
+    display: grid;
     color: white;
 }
 
@@ -286,4 +311,30 @@ body::before {
     border-color: transparent;
     border-style: none;
     border-width: 14px;
+}
+
+@media screen and (max-width: 700px) {
+    .about {
+        top: 60px;
+        margin-top: 0;
+    }
+    .about .modal-container {
+        height: 77%;
+    }
+    .about .modal-container .modal {
+        width: 100%;
+        height: 100%;
+    }
+    .about .modal-container .modal .descricao {
+        height: 50%;
+        width: 80%;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    .about .modal-container .modal .skills-container {
+        width: 55%;
+        height: 229px;
+        left: 40%;
+        top: 294px;
+    }
 }

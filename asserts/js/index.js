@@ -1,14 +1,14 @@
 const select = (el, all = false) => {
     el = el.trim()
     if (all) {
-        return [...document.querySelectorAll(el)]
+        return [...document.querySelectorAll(el)];
     } else {
-        return document.querySelector(el)
+        return document.querySelector(el);
     }
 }
 
 const on = (type, el, listener, all = false) => {
-    const selectEl = select(el, all)
+    const selectEl = select(el, all);
 
     if (selectEl) {
         if (all) {
@@ -29,9 +29,8 @@ const scrollto = (el) => {
 on('click', '#navbar .nav-link', function (e) {
     const section = select(this.hash);
     if (section) {
-        e.preventDefault()
+        e.preventDefault();
 
-        const navbar = select('#navbar');
         const header = select('#header');
         const sections = select('section', true);
         const navlinks = select('#navbar .nav-link', true);
@@ -51,63 +50,32 @@ on('click', '#navbar .nav-link', function (e) {
         }
 
         if (!header.classList.contains('header-top')) {
-            header.classList.add('header-top')
+            header.classList.add('header-top');
             setTimeout(function () {
                 sections.forEach((item) => {
                     item.classList.remove('mostrar')
-                })
-                section.classList.add('mostrar')
+                });
+                section.classList.add('mostrar');
 
             }, 350);
         } else {
             sections.forEach((item) => {
                 item.classList.remove('mostrar')
-            })
-            section.classList.add('mostrar')
+            });
+            section.classList.add('mostrar');
         }
 
-        scrollto(this.hash)
+        scrollto(this.hash);
     }
-}, true)
-window.addEventListener('load', () => {
-    if (window.location.hash) {
-        const initial_nav = select(window.location.hash);
+}, true);
 
-        if (initial_nav) {
-            const header = select('#header');
-            const navlinks = select('#navbar .nav-link', true);
+const modalInit = (modalID) => {
+    const modal = document.getElementById(modalID);
+    modal.classList.add('mostrar');
+}
 
-            header.classList.add('header-top')
+const about = select('#about');
 
-            navlinks.forEach((item) => {
-                if (item.getAttribute('href') == window.location.hash) {
-                    item.classList.add('active');
-                } else {
-                    item.classList.remove('active');
-                }
-            })
-
-            setTimeout(function () {
-                initial_nav.classList.add('mostrar')
-            }, 350);
-
-            scrollto(window.location.hash)
-        }
-    }
-
-    const iniciaModal = (modalID) => {
-        const modal = document.getElementById(modalID);
-        modal.classList.add('mostrar');
-    }
-
-    const about = document.querySelector('#about');
-    about.addEventListener('click', () => {
-        iniciaModal('modal-about');
-    });
+about.addEventListener('click', () => {
+    modalInit('about');
 });
-
-
-
-
-
-
