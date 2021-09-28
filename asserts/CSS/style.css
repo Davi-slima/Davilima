@@ -35,6 +35,7 @@ body::before {
     transition: ease-in-out 0.4s;
     position: relative;
     height: 100vh;
+    min-width: 490px;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -80,15 +81,19 @@ body::before {
 }
 
 #header .container .navbar {
+    padding: 0;
     margin-top: 25px;
 }
 
-#header .container .navbar a, ul {
+#header .container .navbar a {
     list-style-type: none;
-    color: #ffffff;
-    display: flex;
-    padding: 0;
+}
+
+#header .container .navbar ul {
     margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
     align-items: center;
 }
 
@@ -112,21 +117,6 @@ body::before {
 
 #header .container .navbar a:hover {
     color: rgba(255, 255, 255, 0.6);
-}
-
-@media screen and (max-width: 700px) {
-    #header .container {
-        display: flex;
-        flex-direction: column;
-        margin-left: 0;
-        height: 298px;
-    }
-    #header .container .navbar a {
-        float: none;
-        display: block;
-        text-align: left;
-        margin-right: 38px;
-    }
 }
 
 #header.header-top {
@@ -155,16 +145,60 @@ body::before {
     margin: 0;
 }
 
-@media (max-width: 700px) {
+@media screen and (max-width: 700px) {
     #header.header-top {
-        height: 60px;
+        height: 80px;
     }
     #header.header-top h1 {
         font-size: 25px;
     }
 }
 
-.redes-sociais {
+#header .container .navbar .mobile-nav {
+    display: none;
+    cursor: pointer;
+}
+
+#header .container .navbar .mobile-nav div {
+    width: 30px;
+    height: 2px;
+    background: #ffff;
+    margin: 8px;
+}
+
+@media (max-width: 999px) {
+    body {
+        overflow: hidden;
+    }
+    #header .container .navbar {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background: rgba(255, 255, 255, 0.281);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+    }
+    #header .container .navbar ul {
+        display: contents;
+    }
+    #header .container .navbar li {
+        margin-left: 0;
+        opacity: 1;
+    }
+    #header .container .navbar .mobile-nav {
+        display: block;
+    }
+}
+
+#header .container .navbar.active {
+    transform: translateX(0);
+}
+
+.social-media {
     position: fixed;
     padding: 0;
     top: 350px;
@@ -173,11 +207,11 @@ body::before {
     z-index: 9999;
 }
 
-.redes-sociais .redes {
+.social-media .media {
     display: block;
 }
 
-.redes-sociais .redes .svg-style {
+.social-media .media .svg-style {
     background-color: rgba(255, 255, 255, 0.7);
     display: table;
     padding: 7px;
@@ -185,12 +219,17 @@ body::before {
     margin: 20px;
 }
 
-.redes-sociais .redes .redes-icones:hover {
+.social-media .media .media-icons {
+    margin: 10px;
+    list-style: none;
+}
+
+.social-media .media .media-icons:hover {
     margin: 5px;
     transition: all .1s ease-in-out;
 }
 
-.redes-sociais .redes .svg-style .imagem-icone {
+.social-media .media .svg-style .icon-img {
     width: 18px;
     height: 18px;
     display: table-cell;
@@ -198,19 +237,15 @@ body::before {
     margin: auto;
 }
 
-.redes-sociais .redes .redes-icones {
-    margin: 10px;
-
-}
 @media screen and (max-width: 700px) {
-    .redes-sociais {
+    .social-media {
         display: flex;
         top: 590px;
         left: 0;
         width: 275px;
         margin-right: 0;
     }
-    .redes-sociais .redes {
+    .social-media .media {
         display: flex;
         margin: 0;
         padding: 0;
@@ -219,7 +254,7 @@ body::before {
 
 .about {
     position: fixed;
-    height: 100%;
+    height: 100vh;
     margin-top: 80px;
     background: rgba(0, 0, 0, 0.7);
 }
@@ -239,10 +274,11 @@ body::before {
 .about .modal-container .modal {
     display: flex;
     background: rgba(0, 0, 0, 0.4);
-    width: 83%;
-    height: 80%;
     min-width: 300px;
+    max-width: 80vw;
+    height: 80vh;
     padding: 30px;
+    top: 70px;
     border-radius: 30px;
     box-shadow: 0 0 1em #121212;
     position: relative;
@@ -252,20 +288,20 @@ body::before {
     transition: ease-in-out 0.4s;
 }
 
-.about .modal-container .modal .perfil {
+.about .modal-container .modal .profile {
     position: relative;
     height: 100%;
     width: 250px;
 }
 
-.about .modal-container .modal .perfil .imagem-perfil {
+.about .modal-container .modal .profile .img-profile {
     width: 215px;
     height: 430px;
     margin: 18px;
     border-radius: 15px;
 }
 
-.about .modal-container .modal .perfil .btn-resume {
+.about .modal-container .modal .profile .btn-resume {
     display: block;
     margin: 18px;
     width: 215px;
@@ -276,20 +312,20 @@ body::before {
     background-color: rgba(255, 255, 255, 0.384);
 }
 
-.about .modal-container .modal .perfil .btn-resume:hover {
+.about .modal-container .modal .profile .btn-resume:hover {
     background-color: rgba(199, 199, 199, 0.6);
     box-shadow: 5px 8px 5px rgba(0, 0, 0, 0.7);
 }
 
-.about .modal-container .modal .descricao {
+.about .modal-container .modal .description {
     height: 200px;
     width: 80%;
-    color: white;
-    margin-top: 46px;
-    margin-left: 30px;
+    color: rgb(255 255 255);
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
-.about .modal-container .modal .descricao p {
+.about .modal-container .modal .description p {
     margin-top: 40px;
 }
 
@@ -300,7 +336,7 @@ body::before {
     left: 20%;
     top: 280px;
     display: grid;
-    color: white;
+    color: rgb(255 255 255);
 }
 
 .about .modal-container .modal .skills-container thead {
@@ -313,7 +349,7 @@ body::before {
     border-width: 14px;
 }
 
-@media screen and (max-width: 700px) {
+/* @media screen and (max-width: 300px) {
     .about {
         top: 60px;
         margin-top: 0;
@@ -325,7 +361,8 @@ body::before {
         width: 100%;
         height: 100%;
     }
-    .about .modal-container .modal .descricao {
+    .about .modal-container .modal .description {
+        display: block;
         height: 50%;
         width: 80%;
         margin-top: 20px;
@@ -334,7 +371,7 @@ body::before {
     .about .modal-container .modal .skills-container {
         width: 55%;
         height: 229px;
-        left: 40%;
-        top: 294px;
+        left: 83%;
+        top: 394px;
     }
-}
+} */
