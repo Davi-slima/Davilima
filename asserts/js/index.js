@@ -26,20 +26,11 @@ const scrollto = (el) => {
     })
 }
 
-on('click', '.mobile-nav', function(e) {
-    select('#navbar').classList.toggle('active')
-    // this.classList.toggle('mobile-nav')
-    this.classList.toggle('header container navbar');
-    this.classList.toggle('header container navbar ul');
-    this.classList.toggle('header container navbar li');
-  })
-
 on('click', '.navbar .nav-link', function(e) {
     const section = select(this.hash);
     if (section) {
         e.preventDefault();
 
-        const navbar = select('.mobile-nav');
         const header = select('#header');
         const sections = select('section', true);
         const navlinks = select('.navbar .nav-link', true);
@@ -49,14 +40,6 @@ on('click', '.navbar .nav-link', function(e) {
         });
 
         this.classList.add('active');
-
-        if (navbar.classList.contains('active')) {
-            navbar.classList.remove('active');
-            const navbarMenu = select('.navbar');
-            navbarMenu.classList.toggle('header container navbar');
-            navbarMenu.classList.toggle('header container navbar ul');
-            navbarMenu.classList.toggle('header container navbar li');
-        }
 
         if (this.hash == '#header') {
             header.classList.remove('header-top')

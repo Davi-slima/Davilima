@@ -120,6 +120,8 @@ body::before {
 }
 
 #header.header-top {
+    padding: 11px;
+    width: 100vw;
     height: 80px;
     position: fixed;
     left: 0;
@@ -128,6 +130,7 @@ body::before {
 }
 
 #header.header-top h1 {
+    display: none;
     margin-right: auto;
     font-size: 30px;
 }
@@ -139,63 +142,33 @@ body::before {
 #header.header-top .container {
     display: flex;
     align-items: center;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    left: 290px;
 }
 
 #header.header-top .navbar {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
     margin: 0;
 }
 
-@media screen and (max-width: 700px) {
+#header.header-top .navbar ul {
+    padding: 0;
+}
+
+@media screen and (max-width: 960px) {
     #header.header-top {
         height: 80px;
     }
-    #header.header-top h1 {
-        font-size: 25px;
+    #header.header-top .container {
+        left: 130px;
     }
-}
-
-#header .container .navbar .mobile-nav {
-    display: none;
-    cursor: pointer;
-}
-
-#header .container .navbar .mobile-nav div {
-    width: 30px;
-    height: 2px;
-    background: #ffff;
-    margin: 8px;
-}
-
-@media (max-width: 999px) {
-    body {
-        overflow: hidden;
-    }
-    #header .container .navbar {
-        position: absolute;
-        top: 8vh;
-        right: 0;
-        width: 50vw;
-        height: 92vh;
-        background: rgba(255, 255, 255, 0.281);
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        transform: translateX(100%);
-    }
-    #header .container .navbar ul {
-        display: contents;
-    }
-    #header .container .navbar li {
-        margin-left: 0;
-        opacity: 1;
-    }
-    #header .container .navbar .mobile-nav {
-        display: block;
-    }
-}
-
-#header .container .navbar.active {
-    transform: translateX(0);
 }
 
 .social-media {
@@ -208,6 +181,8 @@ body::before {
 }
 
 .social-media .media {
+    padding: 0px;
+    margin: 0;
     display: block;
 }
 
@@ -256,16 +231,17 @@ body::before {
     position: fixed;
     height: 100vh;
     margin-top: 80px;
+    overflow-y: auto;
     background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 1em rgb(255 255 255 / 30%);
 }
 
 .about .modal-container {
     display: flex;
     width: 100vw;
-    height: 80%;
+    height: 100%;
     overflow: visible;
-    top: 0;
-    left: 0;
+    overflow-y: auto;
     z-index: 2900;
     justify-content: center;
     align-items: center;
@@ -274,14 +250,14 @@ body::before {
 .about .modal-container .modal {
     display: flex;
     background: rgba(0, 0, 0, 0.4);
-    min-width: 300px;
-    max-width: 80vw;
+    width: 80vw;
     height: 80vh;
+    top: 60px;
+    left: 200px;
     padding: 30px;
-    top: 70px;
     border-radius: 30px;
     box-shadow: 0 0 1em #121212;
-    position: relative;
+    position: absolute;
 }
 
 .about .modal-container.mostrar .modal {
@@ -291,11 +267,11 @@ body::before {
 .about .modal-container .modal .profile {
     position: relative;
     height: 100%;
-    width: 250px;
+    width: 270px;
 }
 
 .about .modal-container .modal .profile .img-profile {
-    width: 215px;
+    width: 235px;
     height: 430px;
     margin: 18px;
     border-radius: 15px;
@@ -304,7 +280,7 @@ body::before {
 .about .modal-container .modal .profile .btn-resume {
     display: block;
     margin: 18px;
-    width: 215px;
+    width: 235px;
     height: 40px;
     padding: 0;
     border-radius: 90px;
@@ -330,48 +306,58 @@ body::before {
 }
 
 .about .modal-container .modal .skills-container {
-    width: 70%;
-    height: 250px;
+    display: flex;
     position: absolute;
-    left: 20%;
-    top: 280px;
-    display: grid;
+    top: 31%;
+    left: 300px;
+    width: 80vh;
+    height: auto;
+    margin: 0 20px;
+}
+
+.about .modal-container .modal .skills-container table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
     color: rgb(255 255 255);
 }
 
-.about .modal-container .modal .skills-container thead {
-    font-weight: bold;
+.about .modal-container .modal .skills-container table th, td {
+    text-align: left;
+    padding: 8px;
 }
 
-.tbody, td, tfoot, th, thead, tr {
-    border-color: transparent;
-    border-style: none;
-    border-width: 14px;
-}
-
-/* @media screen and (max-width: 300px) {
-    .about {
+@media screen and (max-width: 960px) {
+    /* .about {
         top: 60px;
         margin-top: 0;
     }
     .about .modal-container {
         height: 77%;
-    }
+    } */
     .about .modal-container .modal {
-        width: 100%;
-        height: 100%;
+        top: 70px;
+        left: 30px;
+        width: 86vw;
     }
-    .about .modal-container .modal .description {
-        display: block;
-        height: 50%;
-        width: 80%;
-        margin-top: 20px;
-        margin-left: 20px;
-    }
-    .about .modal-container .modal .skills-container {
-        width: 55%;
-        height: 229px;
-        left: 83%;
-        top: 394px;
-    }
-} */
+}
+
+.about .modal-container .modal .profile {
+    position: absolute;
+    width: 26vw;
+    height: 74vh;
+}
+
+.about .modal-container .modal .description {
+    position: absolute;
+    left: 281px;
+    width: 47vw;
+}
+
+.about .modal-container .modal .skills-container {
+    width: 42vh;
+}
+
+.about .modal-container .modal .skills-container .skills {
+    width: 47vw;
+}
