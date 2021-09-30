@@ -79,5 +79,3 @@ const about = select('#about');
 about.addEventListener('click', () => {
     modalInit('modal-about');
 });
-
-

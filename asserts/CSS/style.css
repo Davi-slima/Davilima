@@ -119,6 +119,10 @@ body::before {
     color: rgba(255, 255, 255, 0.6);
 }
 
+#header .container .navbar .icon {
+    display: none;
+}
+
 #header.header-top {
     padding: 11px;
     width: 100vw;
@@ -160,15 +164,6 @@ body::before {
 
 #header.header-top .navbar ul {
     padding: 0;
-}
-
-@media screen and (max-width: 960px) {
-    #header.header-top {
-        height: 80px;
-    }
-    #header.header-top .container {
-        left: 130px;
-    }
 }
 
 .social-media {
@@ -282,10 +277,12 @@ body::before {
     margin: 18px;
     width: 235px;
     height: 40px;
-    padding: 0;
+    padding: 6px;
     border-radius: 90px;
     color: white;
     background-color: rgba(255, 255, 255, 0.384);
+    text-align: center;
+    text-decoration: none;
 }
 
 .about .modal-container .modal .profile .btn-resume:hover {
@@ -340,24 +337,20 @@ body::before {
         left: 30px;
         width: 86vw;
     }
-}
-
-.about .modal-container .modal .profile {
-    position: absolute;
-    width: 26vw;
-    height: 74vh;
-}
-
-.about .modal-container .modal .description {
-    position: absolute;
-    left: 281px;
-    width: 47vw;
-}
-
-.about .modal-container .modal .skills-container {
-    width: 42vh;
-}
-
-.about .modal-container .modal .skills-container .skills {
-    width: 47vw;
+    .about .modal-container .modal .profile {
+        position: absolute;
+        width: 26vw;
+        height: 74vh;
+    }
+    .about .modal-container .modal .description {
+        position: absolute;
+        left: 281px;
+        width: 47vw;
+    }
+    .about .modal-container .modal .skills-container {
+        width: 42vh;
+    }
+    .about .modal-container .modal .skills-container .skills {
+        width: 47vw;
+    }
 }
