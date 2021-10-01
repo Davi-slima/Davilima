@@ -31,6 +31,8 @@ body::before {
     }
 }
 
+/* Header */
+
 #header {
     transition: ease-in-out 0.4s;
     position: relative;
@@ -119,9 +121,7 @@ body::before {
     color: rgba(255, 255, 255, 0.6);
 }
 
-#header .container .navbar .icon {
-    display: none;
-}
+/* Header top */
 
 #header.header-top {
     padding: 11px;
@@ -166,6 +166,14 @@ body::before {
     padding: 0;
 }
 
+@media screen and (max-width: 768px) {
+    #header.header-top .container {
+        left: 140px;
+    }
+}
+
+/* Social media */
+
 .social-media {
     position: fixed;
     padding: 0;
@@ -207,10 +215,10 @@ body::before {
     margin: auto;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
     .social-media {
         display: flex;
-        top: 590px;
+        top: 90vh;
         left: 0;
         width: 275px;
         margin-right: 0;
@@ -222,8 +230,11 @@ body::before {
     }
 }
 
+/* Section about */
+
 .about {
     position: fixed;
+    width: 100vw;
     height: 100vh;
     margin-top: 80px;
     overflow-y: auto;
@@ -231,7 +242,7 @@ body::before {
     box-shadow: 0 0 1em rgb(255 255 255 / 30%);
 }
 
-.about .modal-container {
+.about .container {
     display: flex;
     width: 100vw;
     height: 100%;
@@ -242,7 +253,7 @@ body::before {
     align-items: center;
 }
 
-.about .modal-container .modal {
+.about .container .modal {
     display: flex;
     background: rgba(0, 0, 0, 0.4);
     width: 80vw;
@@ -255,24 +266,24 @@ body::before {
     position: absolute;
 }
 
-.about .modal-container.mostrar .modal {
+.about .container.show-modal .modal {
     transition: ease-in-out 0.4s;
 }
 
-.about .modal-container .modal .profile {
+.about .container .modal .profile {
     position: relative;
     height: 100%;
     width: 270px;
 }
 
-.about .modal-container .modal .profile .img-profile {
+.about .container .modal .profile .img-profile {
     width: 235px;
     height: 430px;
     margin: 18px;
     border-radius: 15px;
 }
 
-.about .modal-container .modal .profile .btn-resume {
+.about .container .modal .profile .btn-resume {
     display: block;
     margin: 18px;
     width: 235px;
@@ -285,12 +296,12 @@ body::before {
     text-decoration: none;
 }
 
-.about .modal-container .modal .profile .btn-resume:hover {
+.about .container .modal .profile .btn-resume:hover {
     background-color: rgba(199, 199, 199, 0.6);
     box-shadow: 5px 8px 5px rgba(0, 0, 0, 0.7);
 }
 
-.about .modal-container .modal .description {
+.about .container .modal .description {
     height: 200px;
     width: 80%;
     color: rgb(255 255 255);
@@ -298,11 +309,11 @@ body::before {
     margin-left: 20px;
 }
 
-.about .modal-container .modal .description p {
+.about .container .modal .description p {
     margin-top: 40px;
 }
 
-.about .modal-container .modal .skills-container {
+.about .container .modal .skills-container {
     display: flex;
     position: absolute;
     top: 31%;
@@ -312,45 +323,73 @@ body::before {
     margin: 0 20px;
 }
 
-.about .modal-container .modal .skills-container table {
+.about .container .modal .skills-container table {
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
     color: rgb(255 255 255);
 }
 
-.about .modal-container .modal .skills-container table th, td {
+.about .container .modal .skills-container table th, td {
     text-align: left;
     padding: 8px;
 }
 
-@media screen and (max-width: 960px) {
-    /* .about {
-        top: 60px;
-        margin-top: 0;
+@media screen and (max-width: 768px) {
+    .about .container .modal {
+        top: 50px;
+        left: 0px;
+        width: 100vw;
+        height: 78vh
     }
-    .about .modal-container {
-        height: 77%;
-    } */
-    .about .modal-container .modal {
-        top: 70px;
-        left: 30px;
-        width: 86vw;
-    }
-    .about .modal-container .modal .profile {
+    .about .container .modal .profile {
         position: absolute;
-        width: 26vw;
-        height: 74vh;
+        width: 35vw;
+        height: 55vh;
     }
-    .about .modal-container .modal .description {
+    .about .container .modal .description {
         position: absolute;
-        left: 281px;
+        left: 300px;
+        width: 47vw;
+        margin-left: 0px;
+    }
+    .about .container .modal .skills-container {
+        width: 40vh;
+        margin: 0 0px;
+    }
+    .about .container .modal .skills-container .skills {
         width: 47vw;
     }
-    .about .modal-container .modal .skills-container {
-        width: 42vh;
-    }
-    .about .modal-container .modal .skills-container .skills {
-        width: 47vw;
-    }
+}
+
+/* Section portfolio */
+
+.portfolio {
+    /* position: fixed; */
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 80px;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 1em rgb(255 255 255 / 30%);
+}
+
+.portfolio.show-modal .container {
+    display: flex;
+}
+
+.portfolio .container .container-fluid {
+    width: 100%;
+    margin: auto;
+}
+
+.portfolio .container .container-fluid .card {
+   background: rgba(0, 0, 0, 0.3);
+}
+
+.portfolio .container .container-fluid .card  .card-title{
+   font-weight: bold;
+   font-size: 20px;
+   color: #FFFF;
 }

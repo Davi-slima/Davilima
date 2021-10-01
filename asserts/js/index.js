@@ -44,7 +44,7 @@ on('click', '.navbar .nav-link', function(e) {
         if (this.hash == '#header') {
             header.classList.remove('header-top')
             sections.forEach((item) => {
-                item.classList.remove('mostrar')
+                item.classList.remove('show-modal')
             });
             return;
         }
@@ -53,16 +53,16 @@ on('click', '.navbar .nav-link', function(e) {
             header.classList.add('header-top');
             setTimeout(function () {
                 sections.forEach((item) => {
-                    item.classList.remove('mostrar')
+                    item.classList.remove('show-modal')
                 });
-                section.classList.add('mostrar');
+                section.classList.add('show-modal');
 
-            }, 350);
+            }, 375);
         } else {
             sections.forEach((item) => {
-                item.classList.remove('mostrar')
+                item.classList.remove('show-modal')
             });
-            section.classList.add('mostrar');
+            section.classList.add('show-modal');
         }
 
         scrollto(this.hash);
@@ -71,11 +71,11 @@ on('click', '.navbar .nav-link', function(e) {
 
 const modalInit = (modalID) => {
     const modal = document.getElementById(modalID);
-    modal.classList.add('mostrar');
+    modal.classList.add('show-modal');
 }
 
 const about = select('#about');
 
 about.addEventListener('click', () => {
-    modalInit('modal-about');
+    modalInit('about');
 });
