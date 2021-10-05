@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Davi Lima</title>
 
-    <link rel="stylesheet" href="asserts/CSS/style.css">
+    <link rel="stylesheet" href="assets/CSS/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 </head>
@@ -71,7 +71,7 @@
         <div class="container">
             <div class="modal">
                 <div class="profile">
-                    <img class="img-profile" src="./asserts/img/Me.jpeg" />
+                    <img class="img-profile" src="./assets/img/Me.jpeg" />
                     <a href="resume/Davi-Lima.pdf" download class="btn-resume">Resume</a>
                 </div>
                 <div class="description">
@@ -123,14 +123,21 @@
 
     <section id="portfolio" class="portfolio">
         <div class="container">
-            <div class="container-fluid">
-                <div class="row mb-5">
-                    <div class="col-sn-4 ml-5">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="asserts/img/portfolio/Restaurant-search.PNG"
-                                alt="Imagem de capa do card">
-                            <div class="card-body">
-                                <h2 class="card-title">RESTAURANT SEARCH</h2>
+            <div class="row portfolio-container">
+                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                    <div class="portfolio-wrap">
+                        <img class="card-img-top" src="assets/img/portfolio/Restaurant-search.PNG"
+                            alt="Imagem de capa do card">
+
+                        <div class="portfolio-info">
+                            <h4>restaurant search</h4>
+                            <p>Restaurant</p>
+                            <div class="portfolio-links">
+                                <a href="#" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                                    title="Restaurant search"><i class="bx bx-plus"></i></a>
+                                <a href="#" data-gallery="portfolioDetailsGallery" data-glightbox="type: external"
+                                    class="portfolio-details-lightbox" title="Portfolio Details"><i
+                                        class="bx bx-plus"></i></a>
                             </div>
                         </div>
                     </div>
@@ -139,7 +146,7 @@
         </div>
     </section>
 
-    <script src="asserts/js/index.js"></script>
+    <script src="assets/js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
         crossorigin="anonymous"></script>
