@@ -2,7 +2,7 @@
     'use strict';
 
     const select = (el, all = false) => {
-        el = el.trim()
+        el = el.trim();
         if (all) {
             return [...document.querySelectorAll(el)];
         } else {
@@ -43,6 +43,7 @@
             });
 
             this.classList.add('active');
+            
 
             if (this.hash == '#header') {
                 header.classList.remove('header-top');
@@ -96,15 +97,3 @@
         }
     });
 })();
-
-
-// const modalInit = (modalID) => {
-//     const modal = document.getElementById(modalID);
-//     modal.classList.add('show-modal');
-// }
-
-// const about = select('#about');
-
-// about.addEventListener('click', () => {
-//     modalInit('about');
-// });
