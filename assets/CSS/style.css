@@ -371,7 +371,7 @@ section.show-modal {
 /* Section portfolio */
 
 .portfolio {
-    /* display: flex; */
+    display: flex;
 }
 
 .portfolio .portfolio-wrap {
