@@ -46,10 +46,6 @@ body::before {
     overflow: visible;
 }
 
-#header * {
-    transition: ease-in-out 0.4s;
-}
-
 #header .container {
     width: 962px;
     height: 549px;
@@ -232,24 +228,20 @@ body::before {
 
 /* Sections General */
 
-section {
+.about {
     display: none;
     position: fixed;
     width: 100vw;
     height: 100vh;
-    margin-top: 80px;
     background: rgba(0, 0, 0, 0.7);
     box-shadow: 0 0 1em rgb(255 255 255 / 30%);
 }
 
-section.show-modal {
-  display: flex;
-}
-/* Section about */
-
-.about {
+.about.show-modal {
     display: flex;
-}
+    top: 80px;
+    transition: ease-in-out 0.5s;
+  }
 
 .about .container {
     display: flex;
@@ -371,10 +363,29 @@ section.show-modal {
 /* Section portfolio */
 
 .portfolio {
-    display: flex;
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 1em rgb(255 255 255 / 30%);
 }
 
-.portfolio .portfolio-wrap {
+.portfolio.show-modal {
+    display: flex;
+    top: 80px;
+    transition: ease-in-out 0.5s;
+}
+
+.portfolio .container {
+    display: flex;
+    width: 100vw;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 2900;
+}
+
+.portfolio .container .portfolio-wrap {
     transition: 0.4s;
     position: relative;
     overflow: hidden;
@@ -382,7 +393,7 @@ section.show-modal {
     background: rgba(0, 0, 0, 0.6);
 }
 
-.portfolio .portfolio-wrap::before {
+.portfolio .container .portfolio-wrap::before {
     content: "";
     background: rgba(0, 0, 0, 0.6);
     position: absolute;
@@ -395,7 +406,7 @@ section.show-modal {
     opacity: 0;
 }
 
-.portfolio .portfolio-wrap .portfolio-info {
+.portfolio .container .portfolio-wrap .portfolio-info {
     opacity: 0;
     position: absolute;
     top: 0;
@@ -412,7 +423,7 @@ section.show-modal {
     align-items: center;
 }
 
-.portfolio .portfolio-wrap .portfolio-info::before {
+.portfolio .container .portfolio-wrap .portfolio-info::before {
     display: block;
     content: "";
     width: 48px;
@@ -426,7 +437,7 @@ section.show-modal {
     z-index: 9999;
 }
 
-.portfolio .portfolio-wrap .portfolio-info::after {
+.portfolio .container .portfolio-wrap .portfolio-info::after {
     display: block;
     content: "";
     width: 48px;
@@ -440,13 +451,13 @@ section.show-modal {
     z-index: 9999;
 }
 
-.portfolio .portfolio-wrap .portfolio-info h4 {
+.portfolio .container .portfolio-wrap .portfolio-info h4 {
     font-size: 22px;
     color: #FFFF;
     font-weight: 600;
 }
 
-.portfolio .portfolio-wrap .portfolio-info p {
+.portfolio .container .portfolio-wrap .portfolio-info p {
     font-size: 16px;
     color: #FFFF;
     text-transform: uppercase;
@@ -454,12 +465,12 @@ section.show-modal {
     margin: 0;
 }
 
-.portfolio .portfolio-wrap .portfolio-links {
+.portfolio .container .portfolio-wrap .portfolio-links {
     text-align: center;
     z-index: 4;
 }
 
-.portfolio .portfolio-wrap .portfolio-links a {
+.portfolio .container .portfolio-wrap .portfolio-links a {
     color: #FFFF;
     margin: 0 2px;
     font-size: 30px;
@@ -467,20 +478,20 @@ section.show-modal {
     transition: 0.3s;
 }
 
-.portfolio .portfolio-wrap .portfolio-links a:hover {
+.portfolio .container .portfolio-wrap .portfolio-links a:hover {
     color: rgba(255, 255, 255, 0.6);
 }
 
-.portfolio .portfolio-wrap:hover .portfolio-info {
+.portfolio .container .portfolio-wrap:hover .portfolio-info {
     opacity: 1;
 }
 
-.portfolio .portfolio-wrap:hover .portfolio-info::before {
+.portfolio .container .portfolio-wrap:hover .portfolio-info::before {
     top: 15px;
     left: 15px;
 }
 
-.portfolio .portfolio-wrap:hover .portfolio-info::after {
+.portfolio .container .portfolio-wrap:hover .portfolio-info::after {
     bottom: 15px;
     right: 15px;
 }

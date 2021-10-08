@@ -29,6 +29,16 @@
         });
     }
 
+    const modalStart = (modalID) => {
+        const open = document.getElementById(modalID);
+        open.classList.add('show-modal')
+    }
+
+    const modalClose = (modalID) => {
+        const close = document.getElementById(modalID);
+        close.classList.remove('show-modal');
+    }
+
     on('click', '.navbar .nav-link', function (e) {
         const section = select(this.hash);
         if (section) {
@@ -38,12 +48,26 @@
             const sections = select('section', true);
             const navlinks = select('.navbar .nav-link', true);
 
+            if (this.hash == '#about') {
+                setTimeout(function () {
+                    modalStart('section-about');
+                    modalClose('section-portfolio');
+                }, 275);
+            }
+
+            if (this.hash == '#portfolio') {
+                setTimeout(function () {
+                    modalStart('section-portfolio');
+                    modalClose('section-about');
+                },275)
+
+            }
+
             navlinks.forEach((item) => {
                 item.classList.remove('active');
             });
 
             this.classList.add('active');
-            
 
             if (this.hash == '#header') {
                 header.classList.remove('header-top');
@@ -55,45 +79,11 @@
 
             if (!header.classList.contains('header-top')) {
                 header.classList.add('header-top');
-                setTimeout(function () {
-                    sections.forEach((item) => {
-                        item.classList.remove('show-modal');
-                    });
-                    section.classList.add('show-modal');
-                }, 375);
-            } else {
-                sections.forEach((item) => {
-                    item.classList.remove('show-modal');
-                });
+            }
+            else {
                 section.classList.add('show-modal');
             }
             scrollto(this.hash);
         }
     }, true);
-
-    window.addEventListener('load', () => {
-        if (window.location.hash) {
-            const initialNav = select(window.location.hash);
-
-            if (initialNav) {
-                const header = select('#header');
-                const navlinks = select('.navbar', true);
-
-                header.classList.add('header-top');
-
-                navlinks.forEach((item) => {
-                    if (item.getAttribute('href') === window.location.hash) {
-                        item.classList.add('active');
-                    } else {
-                        item.classList.remove('active');
-                    }
-                });
-
-                setTimeout(function () {
-                    initialNav.classList.add('show-modal');
-                }, 375);
-                scrollto(window.location.hash);
-            }
-        }
-    });
 })();
