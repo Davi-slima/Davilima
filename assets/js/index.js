@@ -79,6 +79,7 @@
 
             if (!header.classList.contains('header-top')) {
                 header.classList.add('header-top');
+                section.classList.add('show-modal');
             }
             else {
                 section.classList.add('show-modal');
