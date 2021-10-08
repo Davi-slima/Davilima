@@ -241,7 +241,7 @@ body::before {
     display: flex;
     top: 80px;
     transition: ease-in-out 0.5s;
-  }
+}
 
 .about .container {
     display: flex;
@@ -378,16 +378,30 @@ body::before {
 }
 
 .portfolio .container {
-    display: flex;
+    display: block;
     width: 100vw;
     height: 100%;
     overflow-y: auto;
     z-index: 2900;
 }
 
+.portfolio .container .portfolio-title {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    padding: 0;
+    line-height: 1px;
+    margin-top: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+}
+
 .portfolio .container .portfolio-wrap {
     transition: 0.4s;
     position: relative;
+    margin-top: 25px;
     overflow: hidden;
     z-index: 1;
     background: rgba(0, 0, 0, 0.6);
