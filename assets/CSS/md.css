@@ -1,0 +1,61 @@
+@media screen and (min-width: 767px) {
+    #header.header-top .container {
+        left: 40px;
+    }
+    .social-media {
+        display: flex;
+        top: 90vh;
+        left: 30px;
+        width: 275px;
+        margin-right: 0;
+    }
+    .social-media .media {
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+    .about .container .modal {
+        top: 30px;
+        left: 0px;
+        width: 100vw;
+        height: 78vh
+    }
+    .about .container .modal .profile {
+        position: absolute;
+        width: 35vw;
+        height: 55vh;
+    }
+    .about .container .modal .profile .img-profile {
+        width: 200px;
+        height: 355px;
+    }
+    .about .container .modal .profile .btn-resume {
+        width: 200px;
+    }
+    .about .container .modal .description {
+        position: absolute;
+        left: 270px;
+        width: 57vw;
+        height: 190px;
+        margin-left: 0px;
+    }
+    .about .container .modal .description h1 {
+        font-size: 40px;
+        text-align: left;
+    }
+    .about .container .modal .skills-container {
+        width: 50vh;
+        margin: 0 0px;
+        top: 35%;
+        left: 270px;
+    }
+    .about .container .modal .skills-container .skills {
+        width: 47vw;
+    }
+    .portfolio .container .portfolio-title {
+        text-align: left;
+    }
+    .portfolio .container .portfolio-container .portfolio-item {
+        width: 50%;
+    }
+}
