@@ -1,0 +1,25 @@
+@media screen and (min-width: 991px) {
+    #header.header-top .container {
+        left: 40px;
+    }
+    .about .container .modal {
+        top: 30px;
+        left: 6px;
+        width: 90vw;
+        height: 78vh;
+    }
+    .about .container .modal .profile .img-profile{
+        width: 230px;
+        height: 400px;
+    }
+    .about .container .modal .profile .btn-resume{
+        width: 230px;
+    }
+    .about .container .modal .description {
+        height: 187px;
+    }
+    .about .container .modal .skills-container {
+        width: 49vh;
+        top: 30%;
+    }
+}

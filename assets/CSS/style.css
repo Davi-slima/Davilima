@@ -48,7 +48,7 @@ body::before {
 
 #header .container {
     width: 962px;
-    height: 549px;
+    height: 550px;
     margin: 0px;
     margin-left: 100px;
     background-color: rgba(153, 238, 255, 0.0);
@@ -61,6 +61,7 @@ body::before {
     overflow: visible;
     white-space: pre;
     font-family: "Inter", sans-serif;
+    font-weight: bold;
     text-decoration: none;
     color: #FFFF;
     line-height: 1.2;
@@ -162,12 +163,6 @@ body::before {
     padding: 0;
 }
 
-@media screen and (max-width: 768px) {
-    #header.header-top .container {
-        left: 140px;
-    }
-}
-
 /* Social media */
 
 .social-media {
@@ -209,21 +204,6 @@ body::before {
     display: table-cell;
     justify-self: center;
     margin: auto;
-}
-
-@media screen and (max-width: 768px) {
-    .social-media {
-        display: flex;
-        top: 90vh;
-        left: 0;
-        width: 275px;
-        margin-right: 0;
-    }
-    .social-media .media {
-        display: flex;
-        margin: 0;
-        padding: 0;
-    }
 }
 
 /* Sections General */
@@ -306,14 +286,22 @@ body::before {
     margin-left: 20px;
 }
 
+.about .container .modal .description h1 {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+
 .about .container .modal .description p {
     margin-top: 40px;
+    font-size: 20px;
+    text-align: left;
 }
 
 .about .container .modal .skills-container {
     display: flex;
     position: absolute;
-    top: 31%;
+    top: 30%;
     left: 300px;
     width: 80vh;
     height: auto;
@@ -329,35 +317,7 @@ body::before {
 
 .about .container .modal .skills-container table th, td {
     text-align: left;
-    padding: 8px;
-}
-
-@media screen and (max-width: 768px) {
-    .about .container .modal {
-        top: 50px;
-        left: 0px;
-        width: 100vw;
-        height: 78vh
-    }
-    .about .container .modal .profile {
-        position: absolute;
-        width: 35vw;
-        height: 55vh;
-    }
-    .about .container .modal .description {
-        position: absolute;
-        left: 300px;
-        width: 47vw;
-        margin-left: 0px;
-    }
-    .about .container .modal .skills-container {
-        width: 40vh;
-        margin: 0 0px;
-        top: 36%;
-    }
-    .about .container .modal .skills-container .skills {
-        width: 47vw;
-    }
+    padding: 10px;
 }
 
 /* Section portfolio */

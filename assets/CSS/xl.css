@@ -1,0 +1,61 @@
+@media screen and (min-width: 1200px) {
+   #header .container {
+    width: 962px;
+    height: 549px;
+    margin-left: 100px
+   }
+   #header .container  span{
+    max-width: 600px;
+   }
+    #header.header-top .container {
+        left: 290px;
+    }
+    .social-media {
+        display: flex;
+        top: 350px;
+        left: auto;
+        right: 0;
+        width: 100px;
+    }
+    .social-media .media {
+        display: block;
+    }
+    .about .container .modal {
+        width: 80vw;
+        height: 80vh;
+        top: 60px;
+        left: 200px;
+    }
+    .about .container .modal .profile {
+        height: 80%;
+        width: 270px;
+    }
+    .about .container .modal .profile .img-profile {
+        width: 235px;
+        height: 430px;
+        margin: 18px;
+    }
+    .about .container .modal .profile .btn-resume {
+        width: 235px;
+        margin: 18px;
+    }
+    .about .container .modal .description {
+        height: 200px;
+        width: 70%;
+        left: 300px;
+        margin-left: 20px;
+    }
+    .about .container .modal .skills-container {
+        width: 80vh;
+        height: auto;
+        margin: 0 20px;
+        left: 300px;
+        top: 30%;
+    }
+    .portfolio .container .portfolio-title {
+        text-align: center;
+    }
+    .portfolio .container .portfolio-container .portfolio-item {
+        width: 33.33333333%;
+    }
+}
