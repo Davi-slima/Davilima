@@ -118,7 +118,26 @@ body::before {
     color: rgba(255, 255, 255, 0.6);
 }
 
-/* Header top */
+#header .container .navbar .container-fluid .navbar-toggler .bi-list {
+    color: rgb(255 255 255);
+    font-size: 24px;
+}
+
+#header .container .navbar .container-fluid .collapse.show {
+    background: rgba(0, 0, 0, .7);
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    top: 0;
+    transform: translate(-930px, 0);
+    transition: transform 0.3s ease-in-out;
+}
+#header .container .navbar .container-fluid .collapse.show a {
+  margin-right: 0;
+  margin: 60px;
+}
+
+/* Header-top */
 
 #header.header-top {
     padding: 11px;
@@ -162,6 +181,8 @@ body::before {
 #header.header-top .navbar ul {
     padding: 0;
 }
+
+
 
 /* Social media */
 

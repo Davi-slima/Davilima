@@ -8,7 +8,8 @@
     max-width: 600px;
    }
     #header.header-top .container {
-        left: 290px;
+        left: 730px;
+        width: 687px;
     }
     .social-media {
         display: flex;
