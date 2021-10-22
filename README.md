@@ -7,4 +7,5 @@ To create this page, I used following tools:
 - HTML/HTML5
 - CSS/CSS3
 - JavaScript
+- Framer
 - CDN Bootstrap
