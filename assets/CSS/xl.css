@@ -21,42 +21,43 @@
     .social-media .media {
         display: block;
     }
-    .about .container .modal {
+    .about.show-modal .container .modal {
         width: 80vw;
         height: 80vh;
         top: 60px;
         left: 200px;
     }
-    .about .container .modal .profile {
+    .about.show-modal .container .modal .profile {
         height: 80%;
         width: 270px;
     }
-    .about .container .modal .profile .img-profile {
+    .about.show-modal .container .modal .profile .img-profile {
         width: 235px;
         height: 430px;
         margin: 18px;
     }
-    .about .container .modal .profile .btn-resume {
+    .about.show-modal .container .modal .profile .btn-resume {
         width: 235px;
         margin: 18px;
     }
-    .about .container .modal .description {
+    .about.show-modal .container .modal .description {
+        position: absolute;
         height: 200px;
         width: 70%;
         left: 300px;
         margin-left: 20px;
     }
-    .about .container .modal .skills-container {
+    .about.show-modal .container .modal .skills-container {
         width: 80vh;
         height: auto;
         margin: 0 20px;
         left: 300px;
         top: 30%;
     }
-    .portfolio .container .portfolio-title {
+    .portfolio.show-modal .container .portfolio-title {
         text-align: center;
     }
-    .portfolio .container .portfolio-container .portfolio-item {
+    .portfolio.show-modal .container .portfolio-container .portfolio-item {
         width: 33.33333333%;
     }
 }

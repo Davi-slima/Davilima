@@ -53,4 +53,39 @@
     .portfolio.show-modal {
         top: 55px;
     }
+    .portfolio.show-modal .container .portfolio-title  {
+        margin-top: 15px;
+    }
+    .portfolio.show-modal .container .portfolio-title h1 {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 0;
+    }
+    .portfolio.show-modal .container .portfolio-item {
+        padding: 0;
+        left: 55px;
+        position: relative;
+    }
+    .portfolio.show-modal .container .portfolio-item .portfolio-wrap {
+        width: 70%;
+        margin-top: 25px;
+    }
+    .portfolio.show-modal .container .portfolio-wrap .portfolio-info::before {
+        width: 30px;
+        height: 30px;
+    }
+    .portfolio.show-modal .container .portfolio-wrap .portfolio-info::after {
+        width: 30px;
+        height: 30px;
+    }
+    .portfolio.show-modal .container .portfolio-wrap .portfolio-info h4 {
+        font-size: 20px;
+    }
+    
+    .portfolio.show-modal .container .portfolio-wrap .portfolio-info p {
+        font-size: 15px;
+    }
+    .portfolio.show-modal .container .portfolio-wrap .portfolio-links a {
+        font-size: 25px;
+    }
 }

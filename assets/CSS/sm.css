@@ -29,7 +29,7 @@
         top: 10px;
         left: 6px;
         width: 100vw;
-        height: 80vh;
+        height: 90vh;
     }
     .about.show-modal .container .modal .profile {
         width: 220px;
@@ -46,7 +46,8 @@
     }
     .about.show-modal .container .modal .description {
         height: 200px;
-        margin-left: 10px;
+        width: 270px;
+        margin-left: 0;
     }
     .about.show-modal .container .modal .description h1 {
         font-size: 25px;
