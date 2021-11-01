@@ -9,7 +9,7 @@
         left: 300px;
     }
     #header .container .navbar {
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 0;
     }
@@ -18,7 +18,7 @@
         transition: 1s;
     }
     #header.header-top .container .navbar .container-fluid .collapse.show {
-        transform: translate(-320px, 0);
+        transform: translate(-12px, 0);
     }
     #header.header-top .container .navbar .container-fluid .navbar-toggler {
         position: fixed;
@@ -28,23 +28,23 @@
 }
 
 @media screen and (min-width: 991px) {
-    .about .container .modal {
+    .about.show-modal .container .modal {
         top: 30px;
         left: 6px;
         width: 90vw;
         height: 78vh;
     }
-    .about .container .modal .profile .img-profile {
+    .about.show-modal .container .modal .profile .img-profile {
         width: 230px;
         height: 400px;
     }
-    .about .container .modal .profile .btn-resume {
+    .about.show-modal .container .modal .profile .btn-resume {
         width: 230px;
     }
-    .about .container .modal .description {
+    .about.show-modal .container .modal .description {
         height: 187px;
     }
-    .about .container .modal .skills-container {
+    .about.show-modal .container .modal .skills-container {
         width: 49vh;
         top: 30%;
     }
