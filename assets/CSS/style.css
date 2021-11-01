@@ -21,7 +21,7 @@ body::before {
     left: 0px;
     right: 0px;
     top: 0px;
-    height: 100vh;
+    height: 100%;
     z-index: -1;
 }
 
@@ -35,7 +35,7 @@ body::before {
 
 #header {
     transition: ease-in-out 0.4s;
-    position: relative;
+    position: fixed;
     height: 100vh;
     min-width: 490px;
     width: 100vw;
@@ -43,7 +43,6 @@ body::before {
     align-items: center;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.6);
-    overflow: visible;
 }
 
 #header .container {
@@ -129,8 +128,8 @@ body::before {
     width: 300px;
     height: 100%;
     top: 0;
-    transform: translate(-930px, 0);
-    transition: transform 0.3s ease-in-out;
+    transform: translate(-896px, 0);
+    transition: transform 0.3s ease;
 }
 #header .container .navbar .container-fluid .collapse.show a {
   margin-right: 0;
