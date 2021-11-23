@@ -6,7 +6,7 @@
         font-size: 60px;
     }
     #header .container span {
-        max-width: 310px;
+        max-width: 300px;
     }
     #header .container .navbar .container-fluid .collapse.show {
         transform: translate(-345px, 0);
@@ -68,7 +68,7 @@
     }
     .portfolio.show-modal .container .portfolio-item .portfolio-wrap {
         width: 70%;
-        margin-top: 25px;
+        margin-top: 10px;
     }
     .portfolio.show-modal .container .portfolio-wrap .portfolio-info::before {
         width: 30px;
