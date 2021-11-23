@@ -58,10 +58,10 @@
     .about.show-modal .container .modal .skills-container .skills {
         width: 47vw;
     }
-    .portfolio .container .portfolio-title {
+   .portfolio.show-modal .container .portfolio-title {
         text-align: left;
     }
-    .portfolio .container .portfolio-container .portfolio-item {
+    .portfolio.show-modal .container .portfolio-container .portfolio-item {
         width: 50%;
     }
 }
