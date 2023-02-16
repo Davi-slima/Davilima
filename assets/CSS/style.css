@@ -144,9 +144,8 @@ body::before {
     width: 100vw;
     height: 80px;
     position: fixed;
-    left: 0;
-    top: 0;
     background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
 }
 
 #header.header-top h1 {
@@ -168,7 +167,6 @@ body::before {
     justify-content: center;
     margin: 0;
     padding: 0;
-    left: 290px;
 }
 
 #header.header-top .navbar {
@@ -180,6 +178,11 @@ body::before {
 
 #header.header-top .navbar ul {
     padding: 0;
+}
+
+#header.header-top .container .navbar .container-fluid #navbarNav {
+    justify-content: center;
+    width: auto;
 }
 
 /* Social media */
