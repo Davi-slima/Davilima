@@ -1,4 +1,4 @@
-@media screen and (min-width: 1200px) {
+@media only screen and (max-width: 1200px) {
    #header .container {
     width: 962px;
     height: 549px;
@@ -7,25 +7,19 @@
    #header .container  span{
     max-width: 600px;
    }
-    #header.header-top .container {
-        left: 730px;
-        width: 687px;
-    }
     .social-media {
         display: flex;
-        top: 350px;
         left: auto;
-        right: 0;
-        width: 100px;
+        width: 70px;
     }
     .social-media .media {
         display: block;
     }
     .about.show-modal .container .modal {
-        width: 80vw;
-        height: 80vh;
+        width: auto;
+        height: auto;
         top: 60px;
-        left: 200px;
+        left: auto;
     }
     .about.show-modal .container .modal .profile {
         height: 80%;
@@ -41,23 +35,350 @@
         margin: 18px;
     }
     .about.show-modal .container .modal .description {
-        position: absolute;
-        height: 200px;
-        width: 70%;
-        left: 300px;
-        margin-left: 20px;
+        height: auto;
+        width: auto;
+        position: relative;
+        left: auto;
+        text-align: center;
+    }
+    .about.show-modal .container .modal .description h1 {
+        font-size: 35px;
+    }
+    .about.show-modal .container .modal .description p {
+        margin-top: 20px;
     }
     .about.show-modal .container .modal .skills-container {
-        width: 80vh;
-        height: auto;
-        margin: 0 20px;
-        left: 300px;
-        top: 30%;
+        width: auto;
+        top: 35%;
     }
     .portfolio.show-modal .container .portfolio-title {
         text-align: center;
     }
     .portfolio.show-modal .container .portfolio-container .portfolio-item {
         width: 33.33333333%;
+    }
+}
+
+/* 900 pixels */
+
+@media only screen and (max-width: 999px) {
+    #header .container {
+        top: 0;
+    }
+    #header.header-top {
+        z-index: 9999;
+    }
+    #header.header-top .container {
+        left: 300px;
+    }
+    #header .container .navbar {
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
+    #header .container .navbar .container-fluid .navbar-toggler:hover {
+        background: rgba(255, 255, 255, 0.4);
+        transition: 1s;
+    }
+    #header.header-top .container .navbar .container-fluid .collapse.show {
+        transform: translate(-12px, 0);
+    }
+    #header.header-top .container .navbar .container-fluid .navbar-toggler {
+        position: fixed;
+        top: 10px;
+        right: 0;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .about.show-modal .container .modal {
+        top: 30px;
+        left: auto;
+        width: auto;
+        height: 78vh;
+    }
+    .about.show-modal .container .modal .profile .img-profile {
+        width: 230px;
+        height: 400px;
+    }
+    .about.show-modal .container .modal .profile .btn-resume {
+        width: 230px;
+    }
+    .about.show-modal .container .modal .description {
+        height: auto;
+        width: auto;
+        position: relative;
+        left: auto;
+        text-align: center;
+    }
+    .about.show-modal .container .modal .description h1 {
+        font-size: 30px;
+    }
+    .about.show-modal .container .modal .description p {
+        margin-top: 25px;
+    }
+    .about.show-modal .container .modal .skills-container {
+        width: auto;
+    }
+
+}
+
+/* 700 pixels */
+
+@media only screen and (max-width: 767px) {
+    #header.header-top .container {
+        left: 40px;
+    }
+    .social-media {
+        display: flex;
+        top: 90vh;
+        left: 30px;
+        width: 275px;
+        margin-right: 0;
+    }
+    .social-media .media {
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+    .about.show-modal .container .modal .profile {
+        position: relative;
+        width: auto;
+        height: 55vh;
+    }
+    .about.show-modal .container .modal .profile .img-profile {
+        width: 180px;
+        height: 355px;
+    }
+    .about.show-modal .container .modal .profile .btn-resume {
+        width: 180px;
+        margin: 10px;
+    }
+    .about.show-modal .container .modal .description {
+        width: auto;
+        height: 150px;
+    }
+    .about.show-modal .container .modal .description h1 {
+        font-size: 25px;
+    }
+    .about.show-modal .container .modal .description p {
+        margin-top: 25px;
+    }
+    .about.show-modal .container .modal .skills-container {
+        width: 30px;
+        margin: 0;
+        top: 30%;
+        left: 250px;
+    }
+    .about.show-modal .container .modal .skills-container .skills {
+        width: 47vw;
+    }
+   .portfolio.show-modal .container .portfolio-title {
+        text-align: left;
+    }
+    .portfolio.show-modal .container .portfolio-container .portfolio-item {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    #header .container .navbar .container-fluid .collapse.show {
+        transform: translate(-720px, 0);
+    }
+}
+
+
+/* 500 pixels */
+
+@media only screen and (max-width: 576px) {
+    #header .container .navbar .container-fluid .collapse.show {
+        transform: translate(-500px, 0);
+    }
+    #header.header-top .container .navbar .container-fluid .collapse.show {
+        transform: translate(-12px, 0);
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #header .container {
+        margin-left: 10px;
+        width: 100%;
+        height: 400px;
+    }
+    #header .container span {
+        max-width: 410px;
+    }
+    #header.header-top {
+        height: 65px;
+    }
+    .social-media {
+        display: flex;
+        top: 90vh;
+        left: 30px;
+        width: 275px;
+        margin-right: 0;
+    }
+    .social-media .media {
+        display: none;
+    }
+    .about.show-modal {
+        top: 65px;
+    }
+    .about.show-modal .container .modal {
+        top: 10px;
+        left: 6px;
+        width: 100vw;
+        height: 90vh;
+    }
+    .about.show-modal .container .modal .profile {
+        width: auto;
+    }
+    .about.show-modal .container .modal .profile .img-profile {
+        width: 160px;
+        height: 280px;
+        margin: 10px;
+    }
+    .about.show-modal .container .modal .profile .btn-resume {
+        width: 160px;
+    }
+    .about.show-modal .container .modal .description {
+        height: 200px;
+        width: 270px;
+        margin-left: 0;
+    }
+    .about.show-modal .container .modal .description h1 {
+        position: relative;
+        text-align: center;
+    }
+    .about.show-modal .container .modal .description p {
+        margin-left: 15px;
+    }
+    .about.show-modal .container .modal .skills-container {
+        width: auto;
+        top: 60%;
+        margin: 0;
+        left: 30px;
+    }
+    .about .container .modal .skills-container table th, td {
+        padding: 5px;
+    }
+    .portfolio.show-modal {
+        top: 65px;
+    }
+}
+
+/* 400 pixels */
+
+@media only screen and (max-width: 475px) {
+    #header .container {
+        height: 280px;
+    }
+    #header .container h1 {
+        font-size: 60px;
+    }
+    #header .container span {
+        max-width: 300px;
+    }
+    #header .container .navbar .container-fluid .collapse.show a {
+        margin: 76px;
+    }
+    #header .container .navbar .container-fluid .collapse.show {
+        transform: translate(-314px, 0);
+        backdrop-filter: blur(7px);
+        width: 83vw;
+    }
+    #header.header-top {
+        height: 55px;
+    }
+    #header.heafer-top .container .navbar .container-fluid .collapse.show a {
+        margin: 60px;
+    }
+    #header.header-top .container .navbar .container-fluid .collapse.show {
+        top: 50px;
+        height: 100vh;
+        width: 100vw;
+    
+    }
+    .social-media {
+        display: none;
+    }
+    .about.show-modal {
+        top: 55px;
+    }
+    .about.about.show-modal .container .modal {
+        top: 6px;
+        height: 90vh;
+        padding: 15px;
+    }
+    .about.show-modal .container .modal .profile {
+        width: 145px;
+        height: 50%;
+    }
+    .about.show-modal .container .modal .profile .img-profile {
+        width: 130px;
+        height: 230px;
+        margin-left: 2px;
+    }
+    .about.show-modal .container .modal .profile .btn-resume {
+        width: 130px;
+        margin-left: 2px;
+    }
+    .about.show-modal .container .modal .description {
+        margin-left: 15px;
+        width: 60vw;
+    }
+    .about.show-modal .container .modal .description h1 {
+        font-size: 20px;
+    }
+    .about.show-modal .container .modal .description p {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+    .about.show-modal .container .modal .skills-container {
+        left: 2px;
+        top: 55%;
+        width: auto;
+    }
+    .about .container .modal .skills-container table th, td {
+        padding: 5px;
+    }
+    .portfolio.show-modal {
+        top: 55px;
+    }
+    .portfolio.show-modal .container .portfolio-title  {
+        margin-top: 15px;
+    }
+    .portfolio.show-modal .container .portfolio-title h1 {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 0;
+    }
+    .portfolio.show-modal .container .portfolio-container .portfolio-item {
+        padding: 0;
+        left: 50px;
+        position: relative;
+        width: 100%;
+    }
+    .portfolio.show-modal .container .portfolio-item .portfolio-wrap {
+        width: 70%;
+        margin-top: 10px;
+    }
+    .portfolio.show-modal .container .portfolio-wrap .portfolio-info::before {
+        width: 30px;
+        height: 30px;
+    }
+    .portfolio.show-modal .container .portfolio-wrap .portfolio-info::after {
+        width: 30px;
+        height: 30px;
+    }
+    .portfolio.show-modal .container .portfolio-wrap .portfolio-info h4 {
+        font-size: 20px;
+    }
+    
+    .portfolio.show-modal .container .portfolio-wrap .portfolio-info p {
+        font-size: 15px;
+    }
+    .portfolio.show-modal .container .portfolio-wrap .portfolio-links a {
+        font-size: 25px;
     }
 }
