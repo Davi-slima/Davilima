@@ -1,61 +1,71 @@
 @media only screen and (max-width: 1200px) {
-   #header .container {
-    width: 962px;
-    height: 549px;
-    margin-left: 100px
-   }
    #header .container  span{
-    max-width: 600px;
+    max-width: 70%;
    }
     .social-media {
         display: flex;
         left: auto;
-        width: 70px;
+        width: 7%;
     }
     .social-media .media {
         display: block;
     }
     .about.show-modal .container .modal {
-        width: auto;
-        height: auto;
-        top: 60px;
-        left: auto;
+        width: 90%;
+        height: 65%;
+        top: 10%;
+        left: 3%;
     }
     .about.show-modal .container .modal .profile {
         height: 80%;
-        width: 270px;
+        width: 30%;
     }
     .about.show-modal .container .modal .profile .img-profile {
-        width: 235px;
-        height: 430px;
-        margin: 18px;
+        width: 90%;
+        height: auto;
+        margin: 1rem
     }
     .about.show-modal .container .modal .profile .btn-resume {
-        width: 235px;
-        margin: 18px;
+        width: 90%;
+        height: auto;
+        margin: 1rem;
     }
     .about.show-modal .container .modal .description {
         height: auto;
-        width: auto;
+        width: 80%;
         position: relative;
-        left: auto;
         text-align: center;
+        left: 1%;
     }
     .about.show-modal .container .modal .description h1 {
-        font-size: 35px;
+        margin-top: 1rem;
+        font-size: 2rem;;
     }
     .about.show-modal .container .modal .description p {
-        margin-top: 20px;
+        margin-top: 1rem;
     }
     .about.show-modal .container .modal .skills-container {
-        width: auto;
-        top: 35%;
+        width: 80%;
+        margin: 1rem auto;
+        top: 30%;
+        left: 30%;
+    }
+    .about.show-modal .container .modal .skills-container table {
+        width: 80%;
+    }
+    .portfolio.show-modal {
+        top: 5rem;
+    }
+    .portfolio .container {
+        width: 85%;
     }
     .portfolio.show-modal .container .portfolio-title {
         text-align: center;
+       margin: 1rem auto;
     }
     .portfolio.show-modal .container .portfolio-container .portfolio-item {
-        width: 33.33333333%;
+        width: 50%;
+        margin-bottom: 2rem;
     }
 }
 
@@ -70,7 +80,7 @@
     }
     #header.header-top .container {
         left: 300px;
-    }
+    }   
     #header .container .navbar {
         position: fixed;
         top: 0;
@@ -80,6 +90,12 @@
         background: rgba(255, 255, 255, 0.4);
         transition: 1s;
     }
+    #header.header-top .container .navbar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: auto;
+    }
     #header.header-top .container .navbar .container-fluid .collapse.show {
         transform: translate(-12px, 0);
     }
@@ -87,6 +103,9 @@
         position: fixed;
         top: 10px;
         right: 0;
+    }
+    .portfolio.show-modal {
+        top: 5rem;
     }
 }
 
@@ -118,7 +137,8 @@
         margin-top: 25px;
     }
     .about.show-modal .container .modal .skills-container {
-        width: auto;
+        width: 80%;
+        left: 30%;
     }
 
 }
@@ -283,7 +303,7 @@
         margin: 76px;
     }
     #header .container .navbar .container-fluid .collapse.show {
-        transform: translate(-314px, 0);
+        transform: translate(-350px, 0);
         backdrop-filter: blur(7px);
         width: 83vw;
     }
