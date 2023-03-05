@@ -183,8 +183,8 @@ body::before {
     margin-top: 20px;
     transform: rotate(0deg);
 }
-#header .container .navbar .pos-f-t {
-    background-color: rgba(0, 0, 0.3);
+#header .container .navbar .navbar-collapse.show li {
+    background-color: rgba(0, 0, 0, 0.7);
 }
 .navbar-light #navbar-toggler  {
     color: rgba(255, 255, 255);
