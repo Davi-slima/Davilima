@@ -121,24 +121,70 @@ body::before {
     color: rgba(255, 255, 255);
 }
 
-#header .container .navbar .container-fluid .navbar-toggler .bi-list {
-    color: rgb(255 255 255);
-    font-size: 24px;
+#header .container .navbar .pos-f-t .navbar-toggler {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    transition: .5s ease-in-out;
 }
 
-#header .container .navbar .container-fluid .collapse.show {
-    background: rgba(0, 0, 0, .8);
-    position: fixed;
-    width: 300px;
-    height: 100%;
-    top: 0;
-    transform: translate(-896px, 0);
-    transition: ease-in-out 0.4s;
+#header .container .navbar .pos-f-t .navbar-toggler, .navbar-toggler:focus, .navbar-toggler:active, .navbar-toggler-icon:focus  {
+    outline: none;
+    box-shadow: none;
+    border: 0;
 }
-#header .container .navbar .container-fluid .collapse.show a {
-  margin-right: 0;
-  margin: 80px;
-  padding: 20px;
+
+#header .container .navbar .pos-f-t .navbar-toggler span {
+   margin: 0;
+   padding: 0;
+}
+
+#header .container .navbar .pos-f-t .navbar-toggler .toggler-icon   {
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 1px ;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+#header .container .navbar .pos-f-t .navbar-toggler .middle-bar {
+    margin-top: 0;
+}
+
+#header .container .navbar .pos-f-t .navbar-toggler .top-bar {
+    margin-top: 0;
+    transform: rotate(125deg);
+}
+
+#header .container .navbar .pos-f-t .navbar-toggler .middle-bar {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+#header .container .navbar .pos-f-t .navbar-toggler .bottom-bar {
+    margin-top: 0px;
+    transform: rotate(-135deg);
+}
+
+#header .container .navbar .pos-f-t .navbar-toggler.collapsed .top-bar {
+    margin-top: -20px;
+    transform: rotate(0deg);
+}
+#header .container .navbar .pos-f-t .navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+#header .container .navbar .pos-f-t .navbar-toggler.collapsed .bottom-bar {
+    margin-top: 20px;
+    transform: rotate(0deg);
+}
+#header .container .navbar .pos-f-t {
+    background-color: rgba(0, 0, 0.3);
 }
 .navbar-light #navbar-toggler  {
     color: rgba(255, 255, 255);
@@ -192,11 +238,10 @@ body::before {
     padding: 0;
 }
 
-#header.header-top .container .navbar .container-fluid #navbarNav {
+#header .container .navbar .pos-f-t .collapse.show #navbarNav {
     justify-content: center;
     width: auto;
 }
-
 
 
 /* Social media */
